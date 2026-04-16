@@ -7,8 +7,18 @@ package basic.question03;
 public class Question03_2 {
 
 	public static void main(String[] args) {
+		int basePrice = 1200;
+		int tickets = 3;
+		int reducedPrice = basePrice - 200;
+		int reducedTickets = --tickets;
+		int totalPrice = reducedPrice * reducedTickets;
+		double taxRate = 1.1;
 
-		// TODO:ここに実装
-		
+		int totalWithTax = (int) (totalPrice * taxRate);
+
+		System.out.println("購入可能枚数は" + reducedTickets + "枚です。");
+		System.out.println("値下げ後の1枚あたりの料金は" + reducedPrice + "円です。");
+		System.out.println("合計金額(税抜き)は" + totalPrice + "円です。");
+		System.out.println("合計金額(税込み)は" + totalWithTax + "円です。");
 	}
 }
